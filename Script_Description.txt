@@ -1,0 +1,40 @@
+Script Description:
+
+The provided Python script is designed to monitor a specified directory on the filesystem continuously. Whenever a new file is created within the monitored directory, the script prints a message to the console, indicating the path of the new file and the current date-time stamp.
+
+Functionality:
+
+1.Monitoring Directory:
+    - The script starts by printing a message indicating that it is monitoring the specified directory.
+
+2.Handling Directory Existence
+    - It attempts to retrieve the list of files in the directory specified by the user.
+    - If the directory does not exist, it prints an error message indicating that the directory is not found and exits the function.
+
+3.Continuously Monitoring for New Files:
+    - The script enters a while loop that runs indefinitely, continuously monitoring the directory for changes.
+
+4.Checking for New Files:
+    - Within each iteration of the loop, it retrieves the current list of files in the directory.
+    - It then identifies any new files by calculating the set difference between the current list of files and the previous list of files.
+
+5.Printing New File Information:
+    - If new files are detected, it iterates through the list of new files and prints a message for each new file.
+    - The message includes the path of the new file and the current date-time stamp.
+
+6.Updating File List:
+    - After processing the new files, it updates the set of files from the previous iteration for the next comparison.
+
+7.Error Handling:
+    - The script includes error handling to catch the `FileNotFoundError` exception, which may occur if the specified directory does not exist.
+    - If such an error occurs, it prints an error message indicating that the directory is not found and exits the function.
+
+Evaluation Criteria:
+
+The script will be evaluated based on the following criteria:
+- Correct implementation of file monitoring functionality.
+- Proper utilization of Python concepts, including file system operations, error handling, and datetime manipulation.
+- Clarity and cleanliness of the code structure.
+- Efficiency in terms of resource usage and responsiveness.
+- The ability to handle potential errors, such as directory not found.
+- Understanding demonstrated during a possible viva voce session regarding the reasoning behind the implementation choices made in the script.
